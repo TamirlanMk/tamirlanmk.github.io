@@ -36,38 +36,13 @@ export default {
       }"
     >
       <li v-for="link in menu">
-        <router-link to="/" class="menu__link text-xl text-white md:text-sm" data-cursor="true" @click="active ? toggleMobileMenu() : ''">
-          Главная
-        </router-link>
-      </li>
-      <li>
         <router-link
-          to="/portfolio"
+          :to="link.url"
           class="menu__link text-xl text-white md:text-sm"
           data-cursor="true"
           @click="active ? toggleMobileMenu() : ''"
         >
-          Портфолио
-        </router-link>
-      </li>
-      <li>
-        <router-link
-          to="/about-me"
-          class="menu__link text-xl text-white md:text-sm"
-          data-cursor="true"
-          @click="active ? toggleMobileMenu() : ''"
-        >
-          Обо мне
-        </router-link>
-      </li>
-      <li>
-        <router-link
-          to="/contacts"
-          class="menu__link text-xl text-white md:text-sm"
-          data-cursor="true"
-          @click="active ? toggleMobileMenu() : ''"
-        >
-          Контакты
+          {{ link.name }}
         </router-link>
       </li>
     </ul>
