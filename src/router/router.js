@@ -5,7 +5,7 @@ import RoomsIndex from '../views/Portfolio/PortfolioIndex.vue';
 import ContactsIndex from '../views/Contacts/ContactsIndex.vue';
 import AttractionsIndex from '../views/About/AboutIndex.vue';
 
-const basePath = '/test';
+const basePath = '';
 
 const routes = [
   { name: 'home', path: `${basePath}/`, component: HomeIndex },
