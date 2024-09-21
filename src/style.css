@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .list {
+        padding-left: 32px;
+    }
+
+    .list li {
+        position: relative;
+    }
+
+    .list li::before {
+        content: url('assets/images/icons/arrow.svg');
+        width: 12px;
+        aspect-ratio: 1/1;
+
+        position: absolute;
+        left: -32px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@layer base {
+    @font-face {
+        font-family: 'Stolzl Book';
+        src: url('./assets/fonts/Stolzl/Stolzl-Book.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Stolzl';
+        src: url('./assets/fonts/Stolzl/Stolzl-Regular.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Stolzl';
+        src: url('./assets/fonts/Stolzl/Stolzl-Bold.woff2') format('woff2');
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Stolzl';
+        src: url('./assets/fonts/Stolzl/Stolzl-Medium.woff2') format('woff2');
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    :root {
+        scrollbar-face-color: rgb(210, 210, 210); /* Firefox 63 compatibility */
+        scrollbar-track-color: rgb(214, 222, 225); /* Firefox 63 compatibility */
+        scrollbar-color: rgb(210, 210, 210) rgb(46, 54, 69);
+        scrollbar-width: thin !important;
+    }
+}
